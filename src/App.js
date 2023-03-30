@@ -18,11 +18,32 @@ function App() {
     loadData();
   }, []);
 
+  console.log(products);
+
+  //TEST
   return (
     <div className="container">
-      <h1>Sunglass Shop</h1>
+      <h1>Meowingtons</h1>
+      {products.map((product, index) => (
+        <StoreProduct key={index} product={product} />
+      ))}
     </div>
   );
 }
+// //Practice - TEST PRODUCTS BELOW
+
+const StoreProduct = ({ product }) => {
+  return (
+    <li>
+      <p>{product.name}</p>
+      <p>
+        <img src={product.images[0]} alt={product.name} width="50%" />
+      </p>
+      <p> {product.price}</p>
+      <p>{product.description}</p>
+      <button>Buy Now</button>
+    </li>
+  );
+};
 
 export default App;
