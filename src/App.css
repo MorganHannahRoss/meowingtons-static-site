@@ -13,6 +13,10 @@ body {
   margin-right: auto;
 }
 
+.center {
+  justify-content: center;
+}
+
 header {
   display: grid;
   align-items: center;

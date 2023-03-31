@@ -90,17 +90,17 @@ function App() {
       <section>
         <h1>Featured Products</h1>
 
-        <div class="feature-grid">
-          <Hearts
-            height="80"
-            width="80"
-            color="#4fa94d"
-            ariaLabel="hearts-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={products.length <= 0}
-          />
+        <Hearts
+          height="80"
+          width="80"
+          color="pink"
+          ariaLabel="hearts-loading"
+          wrapperStyle={{}}
+          wrapperClass="center"
+          visible={products.length <= 0}
+        />
 
+        <div class="feature-grid">
           {featuredProducts.map((product, index) => (
             <StoreProduct key={index} product={product} />
           ))}
