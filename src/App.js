@@ -2,10 +2,10 @@ import { checkout } from "./services/checkout";
 import { React, useEffect, useState } from "react";
 import "./App.css";
 import Select from "react-select";
+import { Hearts } from "react-loader-spinner";
 
 // The function that makes the fetch request to the Products API
 import { getProducts } from "./services/getProducts";
-import { check } from "prettier";
 
 //filter options from react-select
 const filterOptions = [
@@ -33,7 +33,6 @@ function App() {
   const [selectedSort, setSelectedSort] = useState(undefined);
   //userface to change a category
   function handleCategoryChange(option) {
-    console.log(option.value);
     setSelectedCategory(option);
     if (option.value === "all") {
       return setProducts(allProducts);
@@ -46,7 +45,6 @@ function App() {
   }
   //filter the products
   function handleSortChange(option) {
-    console.log(option.value);
     setSelectedSort(option);
     const sorted = products.sort((a, b) => {
       if (option.value === "low") {
@@ -73,16 +71,12 @@ function App() {
   //sort by - price - low to high/high to low
 
   //Featured products menu
-  console.log(products);
   const featuredProducts = allProducts.filter((product) => {
     const isFeatured = product.metadata.featured === "yes";
     return isFeatured;
   });
 
-  console.log(featuredProducts);
-
   // HTML BELOW
-
   return (
     <div className="body">
       <header>
@@ -97,6 +91,16 @@ function App() {
         <h1>Featured Products</h1>
 
         <div class="feature-grid">
+          <Hearts
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="hearts-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={products.length <= 0}
+          />
+
           {featuredProducts.map((product, index) => (
             <StoreProduct key={index} product={product} />
           ))}

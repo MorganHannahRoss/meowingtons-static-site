@@ -1,3 +1,3 @@
 ## Wireframes
 
-<img src="./wireframes/Wireframes online shop .png">
+![complete page](Wireframes-online-shop.png)
