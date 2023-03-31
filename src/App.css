@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+
+.body {
+  font-size: 1.3rem;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 1fr;
+  background: pink;
+  padding: 2rem 0;
+  border-bottom: rgb(138, 138, 138) solid 0.1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+button {
+  background-color: #046c95;
+  color: #fefffe;
+  border-radius: 4px;
+  padding: 1rem 0;
+  display: inline-block;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #04516f;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: start;
+  gap: 5rem;
+  padding: 2rem 5rem;
+  border-bottom: rgb(138, 138, 138) solid 0.1rem;
+}
+
+.filter-sort-wrap {
+  display: block;
+}
+
+.sort-by {
+  grid-gap: 2rem;
+  align-items: left;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: start;
+}
+
+.product-card {
+  grid-gap: 1rem;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 2rem;
+  max-width: fit-content;
+}
+
+@media screen and (min-width: 40rem) {
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 65rem) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
