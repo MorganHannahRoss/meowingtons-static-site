@@ -1,18 +1,58 @@
-# 01 Project - Online Shop
+## Meowingtons Cat Supplies
 
+#### Description:
 
- Overview of what the product is, with a screenshot of how it looks.
+A one page shopping site for cat products.
 
- Lists the dependencies of the app, such as Stripe and Begin
+## Project Screen Shots
 
- Includes instructions for how to use the app for development:
+The page is reactive for three perspectives, mobile, tablet, and desktop
 
-What needs to be installed on the developer's computer to run this application (e.g Node)
+#### Example:
 
-What terminal commands need to be run to get the app up and running (e.g npm install)
+![complete page](docs/screenshots/mob.png)
+![complete page](docs/screenshots/tab.png)
+![complete page](docs/screenshots/desk.png)
 
- Includes links to the deployed applications:
-Begin
-Render
+## Installation and Setup Instructions
 
-![complete page]( )
+#### Local Setup
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+
+Installation:
+
+`npm install`
+
+To Run Test Suite:
+
+`npm test`
+
+To Start Server:
+
+`npm start`
+
+To Visit App:
+
+`localhost:3000`
+
+#### Services
+
+Links to the deployed applications:
+Render:
+
+https://online-react-catstore.onrender.com
+
+Begin:
+
+Production:
+https://invent-tvd.begin.app
+Staging:
+https://invent-tvd-staging.begin.app
+
+To run on your own, update .env to look like this:
+
+```
+REACT_APP_API_URL={{ your begin url here }}
+REACT_APP_STRIPE_PUBLIC_KEY={{ public stripe api key }}
+```
